@@ -1,11 +1,11 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      external: ['axios'],  // Add axios here
-    },
+    outDir: 'dist',  // Ensure this matches your expected output
+    emptyOutDir: true,
   },
 });

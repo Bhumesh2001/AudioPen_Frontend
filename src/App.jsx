@@ -36,7 +36,7 @@ function App() {
     recognitionRef.current?.stop();
 
     try {
-      const res = await axios.post("http://localhost:5000/summarize", {
+      const res = await axios.post("https://audio-pen-backend.vercel.app/summarize", {
         text: transcription,
       });
       setSummary(res.data.summary);
